@@ -9,17 +9,17 @@
 /* ---------- CSS CUSTOM PROPERTIES ---------- */
 /* ---------- CSS CUSTOM PROPERTIES ---------- */
 :root {
-  /* Renkler (Orange & Dark Premium) */
+  /* Renkler (Green Premium) */
   --clr-green-900: #111827; /* Dark slate */
   --clr-green-800: #1f2937;
   --clr-green-700: #374151; /* Dark gray */
-  --clr-green-600: #ea580c; /* Main Vibrant Orange Primary */
-  --clr-green-500: #f97316; /* Lighter Orange CTA */
-  --clr-green-400: #fb923c; 
-  --clr-green-200: #fed7aa; 
-  --clr-green-100: #ffedd5;
-  --clr-green-50:  #fff7ed;
-  --clr-green-25:  #fffcf9;
+  --clr-green-600: #10b981; /* Main Vibrant Green Primary */
+  --clr-green-500: #34d399; /* Lighter Green CTA */
+  --clr-green-400: #6ee7b7; 
+  --clr-green-200: #a7f3d0; 
+  --clr-green-100: #d1fae5;
+  --clr-green-50:  #ecfdf5;
+  --clr-green-25:  #f4fdf8;
 
   --clr-white:     #ffffff;
   --clr-off-white: #fcfdfd;
@@ -52,7 +52,7 @@
   --shadow-sm: 0 4px 12px rgba(0,0,0,.03);
   --shadow-md: 0 8px 24px rgba(0,0,0,.06);
   --shadow-lg: 0 20px 40px rgba(0,0,0,.08);
-  --shadow-orange: 0 8px 24px rgba(234, 88, 12, 0.25);
+  --shadow-primary: 0 8px 24px rgba(16, 185, 129, 0.25);
 
   /* Transition */
   --transition: 0.3s cubic-bezier(.4,0,.2,1);
@@ -233,8 +233,8 @@ input, select, textarea { font-family: inherit; }
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(234, 88, 12, .15) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(251, 146, 60, .1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(16, 185, 129, .15) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(52, 211, 153, .1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -246,7 +246,7 @@ input, select, textarea { font-family: inherit; }
 .bismillah {
   font-family: var(--font-arabic);
   font-size: clamp(1.8rem, 4.5vw, 3rem);
-  color: var(--clr-green-400); /* Orange */
+  color: var(--clr-green-400); /* Green */
   margin-bottom: var(--space-lg);
   line-height: 1.8;
   direction: rtl;
@@ -296,11 +296,11 @@ input, select, textarea { font-family: inherit; }
 .btn-primary {
   background: var(--clr-green-600);
   color: var(--clr-white);
-  box-shadow: var(--shadow-orange);
+  box-shadow: var(--shadow-primary);
 }
 .btn-primary:hover {
   background: var(--clr-green-500);
-  box-shadow: 0 12px 28px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.35);
   transform: translateY(-2px);
 }
 .btn-primary:active { transform: translateY(0); }
@@ -656,7 +656,7 @@ input, select, textarea { font-family: inherit; }
 .form-control:focus {
   background: var(--clr-white);
   border-color: var(--clr-green-500);
-  box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.12);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
 }
 .form-control::placeholder { color: var(--clr-gray-400); }
 
@@ -793,10 +793,10 @@ input, select, textarea { font-family: inherit; }
   color: #fef08a;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
-.card-green { background: linear-gradient(135deg, #ea580c, #f97316); } /* Re-purposed to orange */
-.card-teal { background: linear-gradient(135deg, #1f2937, #374151); } /* Dark slate */
-.card-olive { background: linear-gradient(135deg, #4b5563, #6b7280); } /* Neutral dark */
-.card-sage { background: linear-gradient(135deg, #c2410c, #ea580c); } /* Deep orange */
+.card-green { background: linear-gradient(135deg, #059669, #10b981); } /* Restored to green */
+.card-teal { background: linear-gradient(135deg, #0d9488, #14b8a6); } /* Restored to teal */
+.card-olive { background: linear-gradient(135deg, #65a30d, #84cc16); } /* Restored to olive */
+.card-sage { background: linear-gradient(135deg, #0f766e, #0f625c); } /* Restored to dark green */
 
 .rc-label { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; opacity: 0.9; }
 .rc-value { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.2rem; }

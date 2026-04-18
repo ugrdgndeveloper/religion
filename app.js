@@ -171,11 +171,11 @@
     'ר': { v:200, n:'Resh',       t:'-', ord:20 },
     'ש': { v:300, n:'Shin',       t:'-', ord:21 },
     'ת': { v:400, n:'Tav',        t:'-', ord:22 },
-    'ך': { v:500, n:'Kaf Sofit',  t:'-', ord:11 },
-    'ם': { v:600, n:'Mem Sofit',  t:'-', ord:13 },
-    'ן': { v:700, n:'Nun Sofit',  t:'-', ord:14 },
-    'ף': { v:800, n:'Pe Sofit',   t:'-', ord:17 },
-    'ץ': { v:900, n:'Tsadi Sofit',t:'-', ord:18 },
+    'ך': { v:20,  n:'Kaf Sofit',  t:'-', ord:11 },
+    'ם': { v:40,  n:'Mem Sofit',  t:'-', ord:13 },
+    'ן': { v:50,  n:'Nun Sofit',  t:'-', ord:14 },
+    'ף': { v:80,  n:'Pe Sofit',   t:'-', ord:17 },
+    'ץ': { v:90,  n:'Tsadi Sofit',t:'-', ord:18 },
   };
 
   const HEBREW_KEYS = [
@@ -220,6 +220,7 @@
     'Γ': { v:3,   n:'Gamma',   t:'-', ord:3  },
     'Δ': { v:4,   n:'Delta',   t:'-', ord:4  },
     'Ε': { v:5,   n:'Epsilon', t:'-', ord:5  },
+    'Ϛ': { v:6,   n:'Stigma',  t:'-', ord:6  },
     'Ζ': { v:7,   n:'Zeta',    t:'-', ord:7  },
     'Η': { v:8,   n:'Eta',     t:'-', ord:8  },
     'Θ': { v:9,   n:'Theta',   t:'-', ord:9  },
@@ -231,6 +232,7 @@
     'Ξ': { v:60,  n:'Xi',      t:'-', ord:15 },
     'Ο': { v:70,  n:'Omicron', t:'-', ord:16 },
     'Π': { v:80,  n:'Pi',      t:'-', ord:17 },
+    'Ϟ': { v:90,  n:'Koppa',   t:'-', ord:18 },
     'Ρ': { v:100, n:'Rho',     t:'-', ord:19 },
     'Σ': { v:200, n:'Sigma',   t:'-', ord:20 },
     'Τ': { v:300, n:'Tau',     t:'-', ord:21 },
@@ -239,6 +241,7 @@
     'Χ': { v:600, n:'Chi',     t:'-', ord:24 },
     'Ψ': { v:700, n:'Psi',     t:'-', ord:25 },
     'Ω': { v:800, n:'Omega',   t:'-', ord:26 },
+    'Ϡ': { v:900, n:'Sampi',   t:'-', ord:27 },
     'ς': { v:200, n:'Sigma',   t:'-', ord:20 },
   };
 
