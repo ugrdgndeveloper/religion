@@ -310,34 +310,9 @@
     return result;
   }
 
-  /**
-   * Arapça hesaplama – 4 değerin tümü harf tablosundan okunur.
-   * arabicMode: 'normal' | 'arabi'
-   */
-  function expandHamzaComposite(metin) {
-    let expanded = '';
-    for (const ch of metin) {
-      switch (ch) {
-        case 'أ': case 'إ': case 'آ': case 'ٱ': case 'ﭐ': case 'ﭑ':
-          expanded += 'اء';
-          break;
-        case 'ؤ': case '\uFE85': case '\uFE86':
-          expanded += 'وء';
-          break;
-        case 'ئ': case '\uFE89': case '\uFE8A': case '\uFE8B': case '\uFE8C':
-          expanded += 'يء';
-          break;
-        default:
-          expanded += ch;
-          break;
-      }
-    }
-    return expanded;
-  }
-
   function hesaplaArabic(originalMetin) {
     let temizMetin = removeArabicDiacritics(originalMetin);
-    const metin = expandHamzaComposite(temizMetin);
+    const metin = temizMetin;
     const chars = [];
     let totalNormal  = 0; // [0] – En Büyük
     let totalEnKucuk = 0; // [1] – En Küçük
@@ -1529,15 +1504,15 @@
          vNames.forEach(v => {
             const card = document.getElementById(v.card);
             if (card) {
-                card.style.borderColor = 'var(--clr-green-200)';
-                card.style.background = 'var(--clr-surface)';
+                card.style.borderColor = 'var(--clr-gray-200)';
+                card.style.background = 'var(--clr-white)';
                 card.style.borderWidth = '1px';
             }
          });
          const curr = document.getElementById(currentCardId);
          if (curr) {
-            curr.style.borderColor = 'var(--clr-green-600)';
-            curr.style.background = '#f0fdf4'; // Light green
+            curr.style.borderColor = 'var(--clr-green-500)';
+            curr.style.background = 'var(--clr-green-50)'; // Light orange
             curr.style.borderWidth = '2px';
          }
 

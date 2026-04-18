@@ -917,34 +917,34 @@
             <div style="font-size: 1.4rem; color: var(--clr-green-800); font-weight: bold; margin-bottom: 1rem;" id="vakit-next-label">Sıradaki Vakte Kalan Süre</div>
             <div id="vakit-countdown" style="font-size: 3.5rem; font-weight: bold; color: var(--clr-green-600); margin-bottom: 2rem; font-variant-numeric: tabular-nums;">--:--:--</div>
 
-            <div class="vakitler-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem;">
-              <div class="vakit-card" id="card-imsak" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
-                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">İmsak</div>
-                <div id="time-imsak" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+            <div class="vakitler-grid">
+              <div class="vakit-card" id="card-imsak">
+                <div class="vc-label">İmsak</div>
+                <div id="time-imsak" class="vc-time">--:--</div>
               </div>
-              <div class="vakit-card" id="card-gunes" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
-                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Güneş</div>
-                <div id="time-gunes" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              <div class="vakit-card" id="card-gunes">
+                <div class="vc-label">Güneş</div>
+                <div id="time-gunes" class="vc-time">--:--</div>
               </div>
-              <div class="vakit-card" id="card-ogle" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
-                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Öğle</div>
-                <div id="time-ogle" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              <div class="vakit-card" id="card-ogle">
+                <div class="vc-label">Öğle</div>
+                <div id="time-ogle" class="vc-time">--:--</div>
               </div>
-              <div class="vakit-card" id="card-ikindi" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
-                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">İkindi</div>
-                <div id="time-ikindi" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              <div class="vakit-card" id="card-ikindi">
+                <div class="vc-label">İkindi</div>
+                <div id="time-ikindi" class="vc-time">--:--</div>
               </div>
-              <div class="vakit-card" id="card-aksam" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
-                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Akşam</div>
-                <div id="time-aksam" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              <div class="vakit-card" id="card-aksam">
+                <div class="vc-label">Akşam</div>
+                <div id="time-aksam" class="vc-time">--:--</div>
               </div>
-              <div class="vakit-card" id="card-yatsi" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
-                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Yatsı</div>
-                <div id="time-yatsi" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              <div class="vakit-card" id="card-yatsi">
+                <div class="vc-label">Yatsı</div>
+                <div id="time-yatsi" class="vc-time">--:--</div>
               </div>
             </div>
             
-            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--clr-text-soft);">
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--clr-gray-600);">
               Veriler <strong>Aladhan API</strong> üzerinden <br/>(Method: 13, Diyanet İşleri Başkanlığı) sağlanmaktadır.
             </p>
           </div>
