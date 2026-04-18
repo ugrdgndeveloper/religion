@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İslami Rehber – Kur'an, Peygamberler, Ebced, Takvim</title>
+  <meta name="description" content="Kur'an bilgisi, peygamberler, ebced hesaplama ve İslami takvim çevirici araçlarını barındıran kapsamlı İslami rehber sitesi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" role="banner">
+    <div class="navbar-inner container">
+      <a href="#" class="logo" id="logo-link" data-page="home">
+        <span class="logo-icon">☽</span>
+        <span class="logo-text">İslami Rehber</span>
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Ana Navigasyon">
+        <a href="#" class="nav-link" id="nav-home" data-page="home">Ana Sayfa</a>
+        <a href="#" class="nav-link" id="nav-quran" data-page="quran">Kur'an</a>
+        <a href="#" class="nav-link" id="nav-mushaf" data-page="mushaf">Oku</a>
+        <a href="#" class="nav-link" id="nav-vakitler" data-page="vakitler">Vakitler</a>
+        <a href="#" class="nav-link" id="nav-dualar" data-page="dualar">Dualar</a>
+        <a href="#" class="nav-link" id="nav-prophets" data-page="prophets">Peygamberler</a>
+        <a href="#" class="nav-link" id="nav-ebced" data-page="ebced">Ebced Hesap</a>
+        <a href="#" class="nav-link" id="nav-calendar" data-page="calendar">Takvim Çevirici</a>
+      </nav>
+      <button class="hamburger" id="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====== MOBİL MENÜ ====== -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobil Navigasyon">
+    <a href="#" class="mobile-nav-link" data-page="home">Ana Sayfa</a>
+    <a href="#" class="mobile-nav-link" data-page="quran">Kur'an</a>
+    <a href="#" class="mobile-nav-link" data-page="mushaf">Oku</a>
+    <a href="#" class="mobile-nav-link" data-page="vakitler">Vakitler</a>
+    <a href="#" class="mobile-nav-link" data-page="dualar">Dualar</a>
+    <a href="#" class="mobile-nav-link" data-page="prophets">Peygamberler</a>
+    <a href="#" class="mobile-nav-link" data-page="ebced">Ebced Hesap</a>
+    <a href="#" class="mobile-nav-link" data-page="calendar">Takvim Çevirici</a>
+  </div>
+
+  <!-- ====== MAIN ====== -->
+  <main class="main-content" id="main-content">
+
+    <!-- ===== ANA SAYFA ===== -->
+    <section id="page-home" class="page page-home active" role="main" aria-label="Ana Sayfa">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="bismillah" lang="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+          <h1 class="hero-title">İslami Bilgi Rehberi</h1>
+          <p class="hero-subtitle">Kur'an, Peygamberler, Ebced Hesaplama ve İslami Takvim Çeviricisi ile kapsamlı bir rehber.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" id="hero-explore-btn" data-page="quran">Keşfet</button>
+            <button class="btn btn-outline" id="hero-calendar-btn" data-page="calendar">Takvim Çevirici</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategoriler -->
+      <div class="section-categories container">
+        <h2 class="section-title">Kategoriler</h2>
+        <p class="section-subtitle">İstediğiniz konuyu seçin ve bilgiye ulaşın.</p>
+        <div class="categories-grid">
+
+          <article class="category-card" id="card-quran" role="button" tabindex="0" data-page="quran" aria-label="Kur'an kategorisine git">
+            <div class="card-icon" aria-hidden="true">📖</div>
+            <h3 class="card-title">Kur'an-ı Kerim</h3>
+            <p class="card-desc">Sure bilgileri, ayet sayıları, iniş yerleri ve Kur'an hakkında temel bilgiler.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="category-card" id="card-mushaf" role="button" tabindex="0" data-page="mushaf" aria-label="Kur'an Oku kategorisine git">
+            <div class="card-icon" aria-hidden="true">🕋</div>
+            <h3 class="card-title">Kur'an Oku</h3>
+            <p class="card-desc">Tüm Kur'an sayfalarını Arapça okuyun, dilediğiniz ayeti seçip anında Ebced değerini hesaplayın.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="category-card" id="card-prophets" role="button" tabindex="0" data-page="prophets" aria-label="Peygamberler kategorisine git">
+            <div class="card-icon" aria-hidden="true">🌙</div>
+            <h3 class="card-title">Peygamberler</h3>
+            <p class="card-desc">İslam'da zikredilen 25 peygamber hakkında temel bilgiler ve kısaca hayatları.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="category-card" id="card-dualar" role="button" tabindex="0" data-page="dualar" aria-label="Dualar kategorisine git">
+            <div class="card-icon" aria-hidden="true">🤲</div>
+            <h3 class="card-title">Dualar ve Sureler</h3>
+            <p class="card-desc">Sık kullanılan dua ve sureleri Arapça metni, okunuşu ve mealiyle okuyun.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="category-card" id="card-ebced" role="button" tabindex="0" data-page="ebced" aria-label="Ebced Hesaplama kategorisine git">
+            <div class="card-icon" aria-hidden="true">🔢</div>
+            <h3 class="card-title">Ebced Hesaplama</h3>
+            <p class="card-desc">Arapça harflerin sayısal değerlerine göre ebced hesabı yapın.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="category-card" id="card-calendar" role="button" tabindex="0" data-page="calendar" aria-label="Takvim Çevirici kategorisine git">
+            <div class="card-icon" aria-hidden="true">📅</div>
+            <h3 class="card-title">Takvim Çevirici</h3>
+            <p class="card-desc">Gregoryen, Jülyen ve Hicri takvimler arasında tarih dönüştürme aracı.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+          <article class="category-card" id="card-vakitler" role="button" tabindex="0" data-page="vakitler" aria-label="Namaz Vakitleri kategorisine git">
+            <div class="card-icon" aria-hidden="true">🕌</div>
+            <h3 class="card-title">Namaz Vakitleri</h3>
+            <p class="card-desc">Türkiye il ve ilçeleri için Diyanet uyumlu günlük namaz vakitleri.</p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KUR'AN SAYFASI ===== -->
+    <section id="page-quran" class="page page-quran" role="main" aria-label="Kur'an Sayfası">
+      <div class="page-hero-mini container">
+        <p class="page-icon" aria-hidden="true">📖</p>
+        <h1 class="page-title">Kur'an-ı Kerim</h1>
+        <p class="page-desc">Yüce Allah'ın son ve en büyük kitabı hakkında temel bilgiler.</p>
+      </div>
+
+      <div class="container content-section">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Genel Bilgiler</h3>
+            <ul class="info-list">
+              <li><span class="label">Toplam Sure:</span> <strong>114</strong></li>
+              <li><span class="label">Toplam Ayet:</span> <strong>6.236</strong></li>
+              <li><span class="label">Toplam Cüz:</span> <strong>30</strong></li>
+              <li><span class="label">Toplam Hizb:</span> <strong>60</strong></li>
+              <li><span class="label">İlk İnen Sure:</span> <strong>Alak (96)</strong></li>
+              <li><span class="label">Son İnen Sure:</span> <strong>Maide (5)</strong></li>
+              <li><span class="label">İniş Yeri:</span> <strong>Mekke & Medine</strong></li>
+              <li><span class="label">İniş Süresi:</span> <strong>~23 Yıl</strong></li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Örnek Sureler (Okumak İçin Tıklayın)</h3>
+            <table class="data-table" aria-label="Önemli sure bilgileri">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Sure Adı</th>
+                  <th>Ayet</th>
+                  <th>İniş</th>
+                </tr>
+              </thead>
+              <tbody id="quran-surah-tbody">
+                <tr class="clickable-surah" data-surah="1"><td>1</td><td>Fatiha</td><td>7</td><td>Mekki</td></tr>
+                <tr class="clickable-surah" data-surah="2"><td>2</td><td>Bakara</td><td>286</td><td>Medeni</td></tr>
+                <tr class="clickable-surah" data-surah="36"><td>36</td><td>Yâsîn</td><td>83</td><td>Mekki</td></tr>
+                <tr class="clickable-surah" data-surah="112"><td>112</td><td>İhlas</td><td>4</td><td>Mekki</td></tr>
+                <tr class="clickable-surah" data-surah="114"><td>114</td><td>Nas</td><td>6</td><td>Mekki</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="info-card full-width" id="surah-reading-card" style="display: none; border-color: var(--clr-green-400); box-shadow: var(--shadow-md);">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 2px solid var(--clr-green-100); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+              <h3 id="surah-reading-title" style="margin: 0; padding: 0; border: none;">Sure Yükleniyor...</h3>
+              <button id="close-surah-btn" class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.9rem;">Kapat</button>
+            </div>
+            <div id="surah-reading-content">
+               <!-- Ayetler JS ile buraya yüklenecek -->
+            </div>
+          </div>
+
+          <div class="info-card full-width">
+            <h3>Kur'an'ın Bölümleri</h3>
+            <div class="badges-row">
+              <span class="badge">30 Cüz</span>
+              <span class="badge">60 Hizb</span>
+              <span class="badge">240 Rub'</span>
+              <span class="badge">114 Sure</span>
+              <span class="badge">77 Mekki Sure</span>
+              <span class="badge">37 Medeni Sure</span>
+            </div>
+            <p class="note-text">Not: Bu bölüm ilerleyen aşamalarda genişletilecektir. Tüm sure listesi, Türkçe mealler ve kelime analizleri eklenecektir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MUSHAF SAYFASI ===== -->
+    <section id="page-mushaf" class="page page-mushaf" role="main" aria-label="Mushaf Sayfası">
+      <div class="page-hero-mini container">
+        <p class="page-icon" aria-hidden="true">🕋</p>
+        <h1 class="page-title">Kur'an Oku (Tüm Cüzler)</h1>
+        <p class="page-desc">Aşağıdaki sayfadan istediğiniz kelimeyi veya cümleyi farenizle seçin, açılan butonla hemen Ebced hesabı yapın.</p>
+      </div>
+
+      <div class="container content-section mushaf-container-wrap">
+        <div class="mushaf-toolbar">
+          <select id="mushaf-juz-select" class="form-control form-select" style="max-width: 150px; text-align: center;">
+            <!-- JS tarafından doldurulacak -->
+          </select>
+          <button class="btn btn-outline" id="mushaf-prev-btn">Önceki</button>
+          <select id="mushaf-page-select" class="form-control form-select" style="max-width: 200px; text-align: center;">
+            <!-- JS tarafından doldurulacak -->
+          </select>
+          <button class="btn btn-outline" id="mushaf-next-btn">Sonraki</button>
+        </div>
+
+        <div class="mushaf-page-card">
+          <div id="mushaf-content" class="mushaf-text" dir="rtl" lang="ar">
+            <div class="mushaf-loading" style="text-align: center; padding: 2rem;">Sayfa yükleniyor...</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== DUALAR SAYFASI ===== -->
+    <section id="page-dualar" class="page page-dualar" role="main" aria-label="Dualar Sayfası">
+      <div class="page-hero-mini container">
+        <p class="page-icon" aria-hidden="true">🤲</p>
+        <h1 class="page-title">Dualar ve Sureler</h1>
+        <p class="page-desc">Sık kullanılan dua ve surelerin Arapça metni, Türkçe okunuşu ve anlamı.</p>
+      </div>
+
+      <div class="container content-section">
+        <div class="tool-card" style="max-width: 800px; margin: 0 auto;">
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label for="dua-select" class="form-label" style="text-align:center; font-size:1.1rem; color:var(--clr-green-800);">Okumak İstediğiniz Duayı Seçin</label>
+            <select id="dua-select" class="form-control form-select" style="font-size: 1.1rem; padding: 0.8rem;">
+              <!-- JS ile doldurulacak -->
+            </select>
+          </div>
+
+          <div class="prayer-content-box" style="background:var(--clr-surface); padding: 2rem; border-radius:12px; box-shadow:var(--shadow-sm); border:1px solid var(--clr-green-100);">
+            <h2 id="dua-title" style="text-align:center; color:var(--clr-green-600); margin-bottom: 1.5rem; font-size:1.8rem;">Yükleniyor...</h2>
+            
+            <div class="dua-section" style="margin-bottom: 2rem;">
+              <h4 style="color:var(--clr-green-800); border-bottom:1px solid var(--clr-green-200); padding-bottom:0.5rem; margin-bottom:1rem;">Arapça Metin</h4>
+              <p id="dua-arabic" lang="ar" dir="rtl" style="font-family: 'Amiri', serif; font-size: 2.2rem; line-height: 2.4; text-align: center; color:var(--clr-text-main);">
+              </p>
+            </div>
+
+            <div class="dua-section" style="margin-bottom: 2rem;">
+              <h4 style="color:var(--clr-green-800); border-bottom:1px solid var(--clr-green-200); padding-bottom:0.5rem; margin-bottom:1rem;">Türkçe Okunuşu</h4>
+              <p id="dua-turkce" style="font-size: 1.2rem; line-height: 1.8; color:var(--clr-text-main);">
+              </p>
+            </div>
+
+            <div class="dua-section">
+              <h4 style="color:var(--clr-green-800); border-bottom:1px solid var(--clr-green-200); padding-bottom:0.5rem; margin-bottom:1rem;">Anlamı (Meali)</h4>
+              <p id="dua-meal" style="font-size: 1.1rem; line-height: 1.7; color:var(--clr-text-soft);">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PEYGAMBERLER SAYFASI ===== -->
+    <section id="page-prophets" class="page page-prophets" role="main" aria-label="Peygamberler Sayfası">
+      <div class="page-hero-mini container">
+        <p class="page-icon" aria-hidden="true">🌙</p>
+        <h1 class="page-title">Peygamberler</h1>
+        <p class="page-desc">Kur'an-ı Kerim'de adı geçen 25 peygamber hakkında temel bilgiler.</p>
+      </div>
+
+      <div class="container content-section">
+        <div class="prophets-grid">
+
+          <div class="prophet-card" id="prophet-adem">
+            <div class="prophet-number">1</div>
+            <div class="prophet-info">
+              <h3>Hz. Âdem (a.s.)</h3>
+              <p>İnsanlığın ilk babası ve ilk peygamber. Cennetten yeryüzüne indirilmiştir.</p>
+              <div class="prophet-tags">
+                <span class="tag">İlk Peygamber</span>
+                <span class="tag">Ulü'l-'Azm Değil</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-idris">
+            <div class="prophet-number">2</div>
+            <div class="prophet-info">
+              <h3>Hz. İdris (a.s.)</h3>
+              <p>Yazı ve astronominin ilk öğreticisi olduğu rivayet edilir. Göğe yükseltilmiştir.</p>
+              <div class="prophet-tags"><span class="tag">Astronomi</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-nuh">
+            <div class="prophet-number">3</div>
+            <div class="prophet-info">
+              <h3>Hz. Nuh (a.s.)</h3>
+              <p>950 yıl yaşamış, gemi yaparak büyük tufandan kurtulanları kurtarmıştır.</p>
+              <div class="prophet-tags">
+                <span class="tag">Ulü'l-'Azm</span>
+                <span class="tag">Tufan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-hud">
+            <div class="prophet-number">4</div>
+            <div class="prophet-info">
+              <h3>Hz. Hud (a.s.)</h3>
+              <p>Âd kavmine gönderilmiştir. Kavmi azgınlıkları nedeniyle helak edilmiştir.</p>
+              <div class="prophet-tags"><span class="tag">Âd Kavmi</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-salih">
+            <div class="prophet-number">5</div>
+            <div class="prophet-info">
+              <h3>Hz. Salih (a.s.)</h3>
+              <p>Semud kavmine gönderilmiştir. Mucizesi Allah'ın devesi (Nâka) idi.</p>
+              <div class="prophet-tags"><span class="tag">Semud Kavmi</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-ibrahim">
+            <div class="prophet-number">6</div>
+            <div class="prophet-info">
+              <h3>Hz. İbrahim (a.s.)</h3>
+              <p>Halilullah (Allah'ın Dostu). Kâbe'yi inşa etmiş, ateşe atılsa da yanmamıştır.</p>
+              <div class="prophet-tags">
+                <span class="tag">Ulü'l-'Azm</span>
+                <span class="tag">Halilullah</span>
+                <span class="tag">Kâbe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-lut">
+            <div class="prophet-number">7</div>
+            <div class="prophet-info">
+              <h3>Hz. Lut (a.s.)</h3>
+              <p>Hz. İbrahim'in yeğenidir. Sodom halkına gönderilmiş, kavmi azap ile helak edilmiştir.</p>
+              <div class="prophet-tags"><span class="tag">Sodom</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-ismail">
+            <div class="prophet-number">8</div>
+            <div class="prophet-info">
+              <h3>Hz. İsmail (a.s.)</h3>
+              <p>Hz. İbrahim'in oğlu. Kurban edilmek üzere hazırlandı; yerine koç kesildi.</p>
+              <div class="prophet-tags"><span class="tag">Kurban</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-ishak">
+            <div class="prophet-number">9</div>
+            <div class="prophet-info">
+              <h3>Hz. İshak (a.s.)</h3>
+              <p>Hz. İbrahim'in diğer oğlu. İsrailoğullarının peygamberlerinin atası.</p>
+              <div class="prophet-tags"><span class="tag">İsrailoğulları</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-yakup">
+            <div class="prophet-number">10</div>
+            <div class="prophet-info">
+              <h3>Hz. Yakup (a.s.)</h3>
+              <p>Hz. İshak'ın oğlu, Hz. Yusuf'un babası. İsrail adıyla da anılır.</p>
+              <div class="prophet-tags"><span class="tag">İsrail</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-yusuf">
+            <div class="prophet-number">11</div>
+            <div class="prophet-info">
+              <h3>Hz. Yusuf (a.s.)</h3>
+              <p>Kardeşleri tarafından kuyuya atılmış, sonra Mısır'a aziz olmuştur. Kur'an'da en güzel kıssa.</p>
+              <div class="prophet-tags"><span class="tag">Mısır</span><span class="tag">En Güzel Kıssa</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-eyup">
+            <div class="prophet-number">12</div>
+            <div class="prophet-info">
+              <h3>Hz. Eyyub (a.s.)</h3>
+              <p>Sabrın sembolü. Uzun yıllar hastalıkla imtihan edilmiş, sabrı ile şifa bulmuştur.</p>
+              <div class="prophet-tags"><span class="tag">Sabır</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-suayp">
+            <div class="prophet-number">13</div>
+            <div class="prophet-info">
+              <h3>Hz. Şuayb (a.s.)</h3>
+              <p>Medyenliler ve Eykeliler'e gönderilmiştir. Dürüst ticaret ve haksızlığa karşı mücadele etmiştir.</p>
+              <div class="prophet-tags"><span class="tag">Medyen</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-musa">
+            <div class="prophet-number">14</div>
+            <div class="prophet-info">
+              <h3>Hz. Musa (a.s.)</h3>
+              <p>Kelimullah (Allah ile konuşan). Firavuna karşı mücadele etmiş, Deniz'i yararak İsrailoğullarını kurtarmıştır.</p>
+              <div class="prophet-tags">
+                <span class="tag">Ulü'l-'Azm</span>
+                <span class="tag">Kelimullah</span>
+                <span class="tag">Tevrat</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-harun">
+            <div class="prophet-number">15</div>
+            <div class="prophet-info">
+              <h3>Hz. Harun (a.s.)</h3>
+              <p>Hz. Musa'nın kardeşi ve yardımcısı. İsrailoğullarına birlikte peygamber olarak gönderildiler.</p>
+              <div class="prophet-tags"><span class="tag">Hz. Musa'nın Kardeşi</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-zulkifl">
+            <div class="prophet-number">16</div>
+            <div class="prophet-info">
+              <h3>Hz. Zülkifl (a.s.)</h3>
+              <p>Sabrı ve adaleti ile öne çıkmıştır. Kur'an'da adı geçmekte, hayatı hakkında sınırlı bilgi bulunmaktadır.</p>
+              <div class="prophet-tags"><span class="tag">Adalet</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-davud">
+            <div class="prophet-number">17</div>
+            <div class="prophet-info">
+              <h3>Hz. Davud (a.s.)</h3>
+              <p>Hem peygamber hem hükümdar. Zebur kendisine indirilmiştir. Zırh yapmayı öğretmiştir.</p>
+              <div class="prophet-tags"><span class="tag">Zebur</span><span class="tag">Kral</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-suleyman">
+            <div class="prophet-number">18</div>
+            <div class="prophet-info">
+              <h3>Hz. Süleyman (a.s.)</h3>
+              <p>Cinlere, rüzgâra ve hayvanların diline hükmetmiştir. Hz. Davud'un oğludur.</p>
+              <div class="prophet-tags"><span class="tag">Hükümdar</span><span class="tag">Cinler</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-ilyas">
+            <div class="prophet-number">19</div>
+            <div class="prophet-info">
+              <h3>Hz. İlyas (a.s.)</h3>
+              <p>İsrailoğullarına gönderilmiştir. Putlara tapınmaya karşı mücadele etmiştir.</p>
+              <div class="prophet-tags"><span class="tag">İsrailoğulları</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-elyesa">
+            <div class="prophet-number">20</div>
+            <div class="prophet-info">
+              <h3>Hz. Elyesa (a.s.)</h3>
+              <p>Hz. İlyas'ın öğrencisi ve halefi. İsrailoğullarına peygamber olarak gönderilmiştir.</p>
+              <div class="prophet-tags"><span class="tag">İsrailoğulları</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-yunus">
+            <div class="prophet-number">21</div>
+            <div class="prophet-info">
+              <h3>Hz. Yunus (a.s.)</h3>
+              <p>Balığın karnında kalmış, kavminin iman etmesi ile teslim olarak geri dönmüştür.</p>
+              <div class="prophet-tags"><span class="tag">Balık</span><span class="tag">Ninova</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-zekeriya">
+            <div class="prophet-number">22</div>
+            <div class="prophet-info">
+              <h3>Hz. Zekeriya (a.s.)</h3>
+              <p>Hz. Yahya'nın babasıdır. İleri yaşında Allah'tan çocuk istemiş ve duası kabul görmüştür.</p>
+              <div class="prophet-tags"><span class="tag">Hz. Yahya'nın Babası</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-yahya">
+            <div class="prophet-number">23</div>
+            <div class="prophet-info">
+              <h3>Hz. Yahya (a.s.)</h3>
+              <p>Hz. Zekeriya'nın oğludur. Hz. İsa ile çağdaştır. Şehit edilmiştir.</p>
+              <div class="prophet-tags"><span class="tag">Şehit</span></div>
+            </div>
+          </div>
+
+          <div class="prophet-card" id="prophet-isa">
+            <div class="prophet-number">24</div>
+            <div class="prophet-info">
+              <h3>Hz. İsa (a.s.)</h3>
+              <p>Ruhullah. Mucizelerle desteklenmiş, İncil indirilmiştir. Öldürülmemiş, göğe yükseltilmiştir.</p>
+              <div class="prophet-tags">
+                <span class="tag">Ulü'l-'Azm</span>
+                <span class="tag">Ruhullah</span>
+                <span class="tag">İncil</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prophet-card prophet-last" id="prophet-muhammed">
+            <div class="prophet-number">25</div>
+            <div class="prophet-info">
+              <h3>Hz. Muhammed ﷺ</h3>
+              <p>Son peygamber, Hâtemü'l-Enbiya. Kur'an-ı Kerim kendisine indirilmiştir. 571-632 yılları arasında yaşamıştır.</p>
+              <div class="prophet-tags">
+                <span class="tag">Ulü'l-'Azm</span>
+                <span class="tag">Son Peygamber</span>
+                <span class="tag">Kur'an</span>
+                <span class="tag">Habibullah</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EBCED HESAPLAMA SAYFASI ===== -->
+    <section id="page-ebced" class="page page-ebced" role="main" aria-label="Ebced Hesaplama Sayfası">
+      <div class="page-hero-mini container">
+        <p class="page-icon" aria-hidden="true">🔢</p>
+        <h1 class="page-title">Ebced / Gematria / Isopsephy</h1>
+        <p class="page-desc">Arapça, İbranice ve Yunanca alfabelerinde sayısal değer hesaplama aracı.</p>
+      </div>
+
+      <div class="container content-section">
+
+        <!-- ANA HESAP KARTI -->
+        <div class="ebced-main-card">
+
+          <!-- Alfabe Sekmeleri -->
+          <div class="alpha-tabs" role="tablist" aria-label="Alfabe Seçimi">
+            <button class="alpha-tab active" id="tab-arabic" role="tab" data-alpha="arabic" aria-selected="true">
+              <span class="tab-icon">🕌</span> Arapça (Ebced)
+            </button>
+            <button class="alpha-tab" id="tab-hebrew" role="tab" data-alpha="hebrew" aria-selected="false">
+              <span class="tab-icon">✡️</span> İbranice (Gematria)
+            </button>
+            <button class="alpha-tab" id="tab-greek" role="tab" data-alpha="greek" aria-selected="false">
+              <span class="tab-icon">🏛️</span> Yunanca (Isopsephy)
+            </button>
+          </div>
+
+          <!-- Giriş Alanı -->
+          <div class="ebced-input-section">
+            <div class="ebced-input-row">
+              <div class="ebced-input-group">
+                <label for="ebced-input" class="form-label" id="ebced-input-label">Arapça Metin</label>
+                <div class="input-with-clear">
+                  <input
+                    type="text"
+                    id="ebced-input"
+                    class="form-control arabic-input"
+                    placeholder="بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ"
+                    dir="rtl"
+                    lang="ar"
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button class="input-clear-btn" id="ebced-clear-btn" title="Temizle" aria-label="Metni temizle">✕</button>
+                </div>
+              </div>
+              <button class="btn btn-primary ebced-calc-btn" id="ebced-calculate-btn">
+                <span>Hesapla</span>
+              </button>
+            </div>
+
+            <!-- Ekran Klavyesi -->
+            <div class="vkeyboard-wrapper">
+              <div class="vkeyboard-header">
+                <span class="vkeyboard-label" id="vkeyboard-label">⌨️ Ekran Klavyesi (Arapça)</span>
+                <div class="vkeyboard-actions">
+                  <!-- Muhyiddin-i Arabi Toggle (sadece Arapça'da) -->
+                  <div id="arabi-mode-wrap" class="arabi-mode-wrap" style="display:flex;">
+                    <button id="arabi-mode-btn" class="arabi-toggle-btn" type="button"
+                            title="Muhyiddin-i Arabi hesaplama sistemine geç"
+                            aria-pressed="false">
+                      <span class="arabi-toggle-dot"></span>
+                      <span id="arabi-mode-text">Muhyiddin-i Arabi</span>
+                    </button>
+                  </div>
+                  <button class="vkb-action-btn" id="vkb-space-btn" title="Boşluk">Boşluk</button>
+                  <button class="vkb-action-btn danger" id="vkb-backspace-btn" title="Sil">⌫</button>
+                </div>
+              </div>
+              <div class="vkeyboard" id="virtual-keyboard" role="group" aria-label="Sanal klavye">
+                <!-- JS tarafından oluşturulur -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SONUÇ PANELİ -->
+        <div id="ebced-results-panel" class="ebced-results-panel" style="display:none;">
+
+          <!-- 4'lü Özet Kartları — Hepsi Aynı Anda -->
+          <div class="all-results-header">
+            <h2 class="all-results-title">📊 Tüm Hesaplama Sonuçları</h2>
+            <span class="all-results-subtitle" id="result-alphabet-label">Ebced (Arapça)</span>
+          </div>
+
+          <div class="results-4grid" id="ebced-summary-grid">
+            <!-- JS tarafından doldurulur -->
+          </div>
+
+          <!-- Harf Analizi Tablosu -->
+          <div class="info-card" style="margin-top: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 2px solid var(--clr-green-100); padding-bottom: 0.5rem;">
+              <h3 style="margin-bottom: 0; padding-bottom: 0; border-bottom: none;">🔤 Harf Analizi</h3>
+              <button id="btn-copy-analysis" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">📋 Kopyala</button>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table" id="ebced-letter-table" aria-label="Harf analizi tablosu">
+                <thead>
+                  <tr>
+                    <th>Harf</th>
+                    <th>Okunuş</th>
+                    <th>Tür</th>
+                    <th>En Büyük</th>
+                    <th>Küçük</th>
+                    <th>En Küçük</th>
+                  </tr>
+                </thead>
+                <tbody id="ebced-letter-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Harf Özeti -->
+          <div class="info-card" style="margin-top: 1.5rem;">
+            <h3>📊 Harf Özeti</h3>
+            <div id="ebced-char-summary" class="char-summary-grid"></div>
+          </div>
+
+          <!-- Şemsi/Kameri (Sadece Arapça'da gösterilir) -->
+          <div class="shamsi-kamari-grid" id="shamsi-kamari-section" style="margin-top: 1.5rem;">
+            <div class="info-card">
+              <h3>☀️ Şemsi Harfler</h3>
+              <p class="sk-desc">Metindeki şemsi harfler ve toplam değerleri</p>
+              <div id="ebced-shamsi-chars" class="sk-chars"></div>
+              <div class="sk-total">Toplam: <strong id="ebced-shamsi-total">0</strong></div>
+            </div>
+            <div class="info-card">
+              <h3>🌙 Kameri Harfler</h3>
+              <p class="sk-desc">Metindeki kameri harfler ve toplam değerleri</p>
+              <div id="ebced-kamari-chars" class="sk-chars"></div>
+              <div class="sk-total">Toplam: <strong id="ebced-kamari-total">0</strong></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BİLGİ PANELLER -->
+        <div class="ebced-info-panels">
+          <div class="ebced-info-grid">
+
+            <div class="info-card">
+              <h3>🕌 Ebced (Arapça)</h3>
+              <ul class="info-list">
+                <li><span class="label">En Büyük (Kebir)</span><span class="badge">1 – 1000</span></li>
+                <li><span class="label">Büyük (Sağir)</span><span class="badge">Dijital kök</span></li>
+                <li><span class="label">Küçük (Asgar)</span><span class="badge">Harf basamağı</span></li>
+                <li><span class="label">En Küçük (İsim)</span><span class="badge">Harf isim toplamı</span></li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>✡️ Gematria (İbranice)</h3>
+              <ul class="info-list">
+                <li><span class="label">Mispar Gadol</span><span class="badge">1 – 900 (Sofit ile)</span></li>
+                <li><span class="label">Mispar Katan</span><span class="badge">Dijital kök</span></li>
+                <li><span class="label">Mispar Siduri</span><span class="badge">Ordinal (1–22)</span></li>
+                <li><span class="label">Mispar Kolel</span><span class="badge">+Harf sayısı</span></li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>🏛️ Isopsephy (Yunanca)</h3>
+              <ul class="info-list">
+                <li><span class="label">Tam Değer</span><span class="badge">α=1, ω=800</span></li>
+                <li><span class="label">Küçük Değer</span><span class="badge">Dijital kök</span></li>
+                <li><span class="label">Ordinal</span><span class="badge">1 – 24</span></li>
+                <li><span class="label">Toplam+Sayı</span><span class="badge">Kolel</span></li>
+              </ul>
+            </div>
+
+            <div class="info-card full-width" id="ebced-ref-table-card">
+              <h3 id="ref-table-title">📿 Arapça Harf Değerleri (Ebced-i Kebir)</h3>
+              <div class="table-scroll">
+                <table class="data-table" id="ref-letter-table" aria-label="Referans harf değerleri tablosu">
+                  <thead id="ref-table-head"></thead>
+                  <tbody id="ref-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== TAKVİM BÖLÜMÜ ====== -->
+    <section id="page-calendar" class="page page-calendar" role="main" aria-label="Takvim Çevirici Sayfası">
+      <div class="container">
+        <h2 class="section-title">İslami Takvim Çevirici</h2>
+        <p class="section-subtitle">Miladi, Hicri, Rumi, Jülyen, İbrani ve Cemşidi takvimleri arasında dönüşüm yapın.</p>
+
+        <div class="tool-layout">
+          <!-- Tool Kartı -->
+          <div class="tool-card" id="calendar-tool-card">
+            <h2 class="tool-title">Tarih Dönüştürücü</h2>
+            <p class="tool-subtitle">6 takvim sistemi arasında anlık çeviri yapın.</p>
+
+            <!-- Kaynak takvim -->
+            <div class="form-group">
+              <label for="calendar-from" class="form-label">Kaynak Takvim</label>
+              <select id="calendar-from" class="form-control form-select">
+                <option value="gregorian">Gregoryen (Miladi)</option>
+                <option value="julian">Jülyen</option>
+                <option value="hijri">Hicri (İslami)</option>
+                <option value="persian">Cemşidi / İran</option>
+                <option value="hebrew">İbrani (Yahudi)</option>
+                <option value="rumi">Rumi Takvim</option>
+              </select>
+            </div>
+
+            <!-- Gün / Ay / Yıl -->
+            <div class="date-inputs-row">
+              <div class="form-group">
+                <label for="calendar-day" class="form-label">Gün</label>
+                <input type="number" id="calendar-day" class="form-control"
+                       placeholder="GG" min="1" max="31" />
+              </div>
+              <div class="form-group" style="flex:2;">
+                <label for="calendar-month-sel" class="form-label">Ay</label>
+                <select id="calendar-month-sel" class="form-control form-select">
+                  <!-- JS tarafından doldurulur -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="calendar-year" class="form-label">Yıl</label>
+                <input type="number" id="calendar-year" class="form-control"
+                       placeholder="YYYY" />
+              </div>
+            </div>
+
+            <!-- Butonlar -->
+            <div class="cal-btn-row">
+              <button class="btn btn-primary" id="calendar-convert-btn" aria-label="Tarihi dönüştür">
+                🔄 Dönüştür
+              </button>
+              <button class="btn btn-outline" id="calendar-today-btn" aria-label="Bugünü dönüştür">
+                📅 Bugün
+              </button>
+            </div>
+
+            <!-- Sonuçlar -->
+            <div id="calendar-results-panel" style="display:none;" role="status" aria-live="polite">
+              <h3 class="cal-result-heading">📊 Dönüştürme Sonuçları</h3>
+              <div class="cal-results-grid" id="cal-results-grid">
+                <!-- 6 kart JS tarafından üretilir -->
+              </div>
+              <p class="cal-jd-label" id="cal-jd-label"></p>
+            </div>
+          </div>
+
+          <!-- Bilgi Kartı -->
+          <div class="info-sidebar">
+            <div class="sidebar-card">
+              <h3>Takvimler Hakkında</h3>
+              <ul class="sidebar-list">
+                <li><strong>Gregoryen:</strong> Dünyada yaygın kullanılan Miladi takvim.</li>
+                <li><strong>Jülyen:</strong> Sezar döneminde Roma'da kullanılmıştır.</li>
+                <li><strong>Hicri:</strong> İslam'ın başlangıcı kabul edilen Hz. Muhammed'in ﷺ Mekke'den Medine'ye hicretini (MS 622) esas alır. Ay takvimidir.</li>
+                <li><strong>Rumi:</strong> Osmanlı döneminde kullanılan takvim.</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Hicri Aylar</h3>
+              <ol class="sidebar-ordered-list" lang="ar">
+                <li>Muharrem</li>
+                <li>Safer</li>
+                <li>Rebiü'l-Evvel</li>
+                <li>Rebiü'l-Âhir</li>
+                <li>Cemaziyelevvel</li>
+                <li>Cemaziyelâhir</li>
+                <li>Recep</li>
+                <li>Şaban</li>
+                <li>Ramazan</li>
+                <li>Şevval</li>
+                <li>Zilkade</li>
+                <li>Zilhicce</li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NAMAZ VAKİTLERİ SAYFASI ===== -->
+    <section id="page-vakitler" class="page page-vakitler" role="main" aria-label="Namaz Vakitleri Sayfası">
+      <div class="page-hero-mini container">
+        <p class="page-icon" aria-hidden="true">🕌</p>
+        <h1 class="page-title">Namaz Vakitleri</h1>
+        <p class="page-desc">Türkiye şehirleri için Diyanet İşleri (Method 13) uyumlu günlük ezan vakitleri.</p>
+      </div>
+
+      <div class="container content-section">
+        <div class="tool-card" style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <div class="form-group" style="max-width: 300px; margin: 0 auto 2rem;">
+            <label for="vakit-city" class="form-label" style="text-align: center;">Şehir Seçin</label>
+            <select id="vakit-city" class="form-control form-select">
+              <option value="Adana">Adana</option>
+              <option value="Adiyaman">Adıyaman</option>
+              <option value="Afyonkarahisar">Afyonkarahisar</option>
+              <option value="Agri">Ağrı</option>
+              <option value="Aksaray">Aksaray</option>
+              <option value="Amasya">Amasya</option>
+              <option value="Ankara">Ankara</option>
+              <option value="Antalya">Antalya</option>
+              <option value="Ardahan">Ardahan</option>
+              <option value="Artvin">Artvin</option>
+              <option value="Aydin">Aydın</option>
+              <option value="Balikesir">Balıkesir</option>
+              <option value="Bartin">Bartın</option>
+              <option value="Batman">Batman</option>
+              <option value="Bayburt">Bayburt</option>
+              <option value="Bilecik">Bilecik</option>
+              <option value="Bingol">Bingöl</option>
+              <option value="Bitlis">Bitlis</option>
+              <option value="Bolu">Bolu</option>
+              <option value="Burdur">Burdur</option>
+              <option value="Bursa">Bursa</option>
+              <option value="Canakkale">Çanakkale</option>
+              <option value="Cankiri">Çankırı</option>
+              <option value="Corum">Çorum</option>
+              <option value="Denizli">Denizli</option>
+              <option value="Diyarbakir">Diyarbakır</option>
+              <option value="Duzce">Düzce</option>
+              <option value="Edirne">Edirne</option>
+              <option value="Elazig">Elazığ</option>
+              <option value="Erzincan">Erzincan</option>
+              <option value="Erzurum">Erzurum</option>
+              <option value="Eskisehir">Eskişehir</option>
+              <option value="Gaziantep">Gaziantep</option>
+              <option value="Giresun">Giresun</option>
+              <option value="Gumushane">Gümüşhane</option>
+              <option value="Hakkari">Hakkari</option>
+              <option value="Hatay">Hatay</option>
+              <option value="Igdir">Iğdır</option>
+              <option value="Isparta">Isparta</option>
+              <option value="Istanbul" selected>İstanbul</option>
+              <option value="Izmir">İzmir</option>
+              <option value="Kahramanmaras">Kahramanmaraş</option>
+              <option value="Karabuk">Karabük</option>
+              <option value="Karaman">Karaman</option>
+              <option value="Kars">Kars</option>
+              <option value="Kastamonu">Kastamonu</option>
+              <option value="Kayseri">Kayseri</option>
+              <option value="Kirikkale">Kırıkkale</option>
+              <option value="Kirklareli">Kırklareli</option>
+              <option value="Kirsehir">Kırşehir</option>
+              <option value="Kilis">Kilis</option>
+              <option value="Kocaeli">Kocaeli</option>
+              <option value="Konya">Konya</option>
+              <option value="Kutahya">Kütahya</option>
+              <option value="Malatya">Malatya</option>
+              <option value="Manisa">Manisa</option>
+              <option value="Mardin">Mardin</option>
+              <option value="Mersin">Mersin</option>
+              <option value="Mugla">Muğla</option>
+              <option value="Mus">Muş</option>
+              <option value="Nevsehir">Nevşehir</option>
+              <option value="Nigde">Niğde</option>
+              <option value="Ordu">Ordu</option>
+              <option value="Osmaniye">Osmaniye</option>
+              <option value="Rize">Rize</option>
+              <option value="Sakarya">Sakarya</option>
+              <option value="Samsun">Samsun</option>
+              <option value="Siirt">Siirt</option>
+              <option value="Sinop">Sinop</option>
+              <option value="Sivas">Sivas</option>
+              <option value="Sanliurfa">Şanlıurfa</option>
+              <option value="Sirnak">Şırnak</option>
+              <option value="Tekirdag">Tekirdağ</option>
+              <option value="Tokat">Tokat</option>
+              <option value="Trabzon">Trabzon</option>
+              <option value="Tunceli">Tunceli</option>
+              <option value="Usak">Uşak</option>
+              <option value="Van">Van</option>
+              <option value="Yalova">Yalova</option>
+              <option value="Yozgat">Yozgat</option>
+              <option value="Zonguldak">Zonguldak</option>
+            </select>
+          </div>
+
+          <div id="vakit-loading" style="font-size: 1.2rem; color: var(--clr-green-600); margin-bottom: 2rem;">Yükleniyor...</div>
+          <div id="vakit-error" style="display:none; color: red; margin-bottom: 2rem;">Vakitler çekilemedi.</div>
+
+          <div id="vakit-content" style="display:none;">
+            <div style="font-size: 1.4rem; color: var(--clr-green-800); font-weight: bold; margin-bottom: 1rem;" id="vakit-next-label">Sıradaki Vakte Kalan Süre</div>
+            <div id="vakit-countdown" style="font-size: 3.5rem; font-weight: bold; color: var(--clr-green-600); margin-bottom: 2rem; font-variant-numeric: tabular-nums;">--:--:--</div>
+
+            <div class="vakitler-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem;">
+              <div class="vakit-card" id="card-imsak" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
+                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">İmsak</div>
+                <div id="time-imsak" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              </div>
+              <div class="vakit-card" id="card-gunes" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
+                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Güneş</div>
+                <div id="time-gunes" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              </div>
+              <div class="vakit-card" id="card-ogle" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
+                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Öğle</div>
+                <div id="time-ogle" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              </div>
+              <div class="vakit-card" id="card-ikindi" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
+                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">İkindi</div>
+                <div id="time-ikindi" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              </div>
+              <div class="vakit-card" id="card-aksam" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
+                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Akşam</div>
+                <div id="time-aksam" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              </div>
+              <div class="vakit-card" id="card-yatsi" style="background: var(--clr-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--clr-green-200); box-shadow: var(--shadow-sm);">
+                <div style="font-size: 1.1rem; color: var(--clr-text-soft); font-weight: 500;">Yatsı</div>
+                <div id="time-yatsi" style="font-size: 1.8rem; font-weight: 700; color: var(--clr-text-main); margin-top: 0.5rem;">--:--</div>
+              </div>
+            </div>
+            
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--clr-text-soft);">
+              Veriler <strong>Aladhan API</strong> üzerinden <br/>(Method: 13, Diyanet İşleri Başkanlığı) sağlanmaktadır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Yüzen Buton (Tooltip) Seçim Sonrası Çıkacak -->
+  <div id="selection-tooltip" class="selection-tooltip" style="display: none;">
+    <button id="btn-calc-selection" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;">Ebced Hesapla</button>
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">☽</span>
+        <span class="logo-text">İslami Rehber</span>
+      </div>
+      <p class="footer-text">Kur'an, Peygamberler, Ebced Hesaplama ve Takvim Çevirici araçları ile donatılmış İslami kaynak sitesi.</p>
+      <p class="footer-credit">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+    </div>
+  </footer>
+
+  <script src="calendar.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
